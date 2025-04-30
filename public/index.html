@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/Screenshot 2024-12-04 085815.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,7 +24,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>JM Portfolio</title>
+    <script src="https://kit.fontawesome.com/7718dbf85b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +40,30 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+      <!--         FUNCTION NG BACK TO TOP AT ICONS -->
+    
+    <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+    <script>
+     
+        const backToTopButton = document.getElementById('backToTop');
+    
+       
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block"; 
+            } else {
+                backToTopButton.style.display = "none"; 
+            }
+        };
+    
+      
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
   </body>
 </html>

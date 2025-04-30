@@ -1,38 +1,343 @@
-.App {
-  text-align: center;
+/* PARA SA SMOOTH SCROLL */
+html{
+  scroll-behavior: smooth;
+}
+body { 
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-image: url('/public/EiziePro.jpg');
+  background-size: cover; 
+  background-position: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header { 
+  background:  hsl(281, 75%, 19%);
+  padding: 10px 0;
+  text-align: right;
+  position: sticky;
+  top: 0; 
+  z-index: 1000; 
+  border: 1px solid lch(44.85% 88.53 330.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* STYLE NG NAVIGATION */
+nav { 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav a { 
+  color: #01fcfd;
+  padding: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
+/* PINAKA HOME AT ABOUT ME
+/* FIRST SECTION */ 
+section{
+  margin-top: 100px;
+  border: 1px solid #01fcfd;
+}
+.first-section{
+  display: flex;
+  width: 90%;
+  background-color:  #002e60;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.first-section img {
+  display: flex;
+  margin-top: 20px;
+  width: 220px;
+  height: 341px;
+  margin: 0 auto;
+  opacity: 0; 
+  animation: fadeIn 0.5s forwards, moveRight 5s infinite alternate; 
+}
+
+/* ANIMATION NG PICTURE, NAGALAW */
+@keyframes fadeIn { 
   from {
-    transform: rotate(0deg);
+      opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+      opacity: 1; 
   }
+}
+
+
+@keyframes moveRight {
+  0% {
+      transform: translateX(-50px); 
+  }
+  100% {
+      transform: translateX(50px); 
+  }
+}
+
+/* ANIMATIONG NG TEXT SA HOME PAGE */
+.main-text { 
+  margin-left: 20px;
+  color: #01fcfd;
+  font-size: 20px;
+  opacity: 0; 
+  animation: fadeIn 0.5s forwards, boom 0.5s forwards; 
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; 
+  }
+  to {
+      opacity: 1; 
+  }
+}
+
+
+@keyframes boom {
+  0% {
+      transform: scale(0.5);
+      opacity: 0; 
+  }
+  50% {
+      transform: scale(1.2); 
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1); 
+  }
+}
+.main-text h2{
+  margin-top: -20px;
+  font-size: 50px;
+}
+.main-text h3{
+  margin-top: -40px;
+}
+.main-text p{
+  text-align: justify;
+  width: 90%;
+}
+
+/* SKILLS AT ICONS GALING SA ONLINE
+/* SECOND SECTION */ 
+.second-section{
+  display: flex;
+  width: 90%;
+  background-color:  #002e60;
+  margin: 20px auto;
+  border-radius: 20px;
+  font-size: 30px;
+}
+
+.main-text-skills{
+  text-align: center;
+  margin: 0 auto;
+  color: #01fcfd;
+  font-size: 20px;
+}
+
+/* PORJECTS NA NAGAWA AT MGA DESIGNS */
+/* THIRD SECTION */ 
+.third-section{
+  display: flex;
+  width: 90%;
+  background-color:  #002e60;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.main-text-project{
+  text-align: center;
+  justify-content: center;
+  margin-left: 20px;
+  color: #01fcfd;
+  font-size: 20px;
+}
+.main-text-project a{
+  color: #01fcfd;
+}
+.main-text-project img{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.main-text-project img:hover {
+  transform: scale(1.1); 
+}
+
+/* CONTACT INFORMATION AT STYLE NG ELEMENTS
+/* FOURTH SECTION */ 
+.fourth-section{
+  display: flex;
+  width: 90%;
+  background-color:  #002e60;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.main-text-contact{
+  margin: 0 auto;
+  text-align: center;
+  color: #01fcfd;
+  font-size: 20px;
+}
+.main-text-contact i{
+  height: 50px;
+  width: 50px;
+  color: #01fcfd;
+}
+  .main-text-contact a{
+    height: 50px;
+    width: 50px;
+    color: #01fcfd;
+}
+/*  PINAKA FOOTER AT DESIGN */
+footer{ 
+  text-align: center;
+  background-color:  #002e60;
+  color: #01fcfd;
+  margin-bottom: -100px;
+}
+
+/*  DESIGN NG BACK TO TOP AT FUNCTIONS */
+.back-to-top { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  background-color: #01fcfd; 
+  color: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  text-align: center; 
+  line-height: 50px; 
+  font-size: 24px; 
+  display: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.back-to-top:hover {
+  background-color: #555; 
+}
+/* MENU BAR SA MALIIT NA SCREENS */
+#nav-icon i{ 
+  font-size: 30px;
+  color: #01fcfd;
+  margin-right: 30px;
+}
+
+/* DROPDOWN */
+.nav.active {
+  display: flex; 
+  animation: slideDown 0.7s ease forwards;
+  border-radius: 10px;
+}
+
+@keyframes slideDown {
+  from {
+      max-height: 0;
+      opacity: 0;
+  }
+  to {
+      max-height: 200px; 
+      opacity: 1;
+  }
+}
+
+/* RESPONSIVENESS SA MALILIIT NA SCREEN */
+#menu-header {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+header {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.nav {
+    text-align: center;
+    position: absolute; 
+    top: 50px; 
+    right: 0;
+    background: #002e60; 
+    padding: 10px; 
+    display: flex;
+    flex-direction: column; 
+    width: 150px; 
+    z-index: 1000; 
+}
+
+
+.nav {
+    margin-top: 10px; 
+    display: none; 
+}
+
+#nav-icon {
+    display: block; 
+    cursor: pointer; 
+}
+#port-head {
+  display: none;
+}
+#menu-header {
+  display: block;
+}
+
+}
+
+@media screen and (max-width: 320px) {
+  header {
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .nav {
+      text-align: center;
+      position: absolute; 
+      top: 50px; 
+      right: 0;
+      background: #002e60; 
+      padding: 10px; 
+      display: flex;
+      flex-direction: column; 
+      width: 150px; 
+      z-index: 1000; 
+  }
+
+
+  .nav {
+      margin-top: 10px; 
+      display: none; 
+  }
+
+  #nav-icon {
+      display: block; 
+      cursor: pointer; 
+  }
+  #port-head {
+    display: none;
+  }
+  #menu-header {
+    display: block;
+  }
+
 }

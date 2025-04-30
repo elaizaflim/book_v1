@@ -1,13 +1,343 @@
-body {
+/* PARA SA SMOOTH SCROLL */
+html{
+  scroll-behavior: smooth;
+}
+body { 
+  font-family: Arial, sans-serif;
+  font-size: 20px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-image: url('/public/digital-technology-background-abstract-tech-visual-for-science-template-futuristic-background-with-dots-combination-vector.jpg');
+  background-size: cover; 
+  background-position: center;
+  color: #7d2ebe;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header { 
+  background:  #002e60;
+  padding: 10px 0;
+  text-align: right;
+  position: sticky;
+  top: 0; 
+  z-index: 1000; 
+  border: 1px solid #8d3091;
+}
+
+/* STYLE NG NAVIGATION */
+nav { 
+  display: flex;
+  justify-content: center;
+}
+
+nav a { 
+  color: hsl(69, 100%, 51%);
+  padding: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* PINAKA HOME AT ABOUT ME
+/* FIRST SECTION */ 
+section{
+  margin-top: 100px;
+  border: 1px solid hsl(276, 43%, 30%);
+}
+.first-section{
+  display: flex;
+  width: 90%;
+  background-color:  lab(26.33% 36.51 -21.13 / 0.726);
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.first-section img {
+  display: flex;
+  margin-top: 20px;
+  width: 220px;
+  height: 341px;
+  margin: 0 auto;
+  opacity: 0; 
+  animation: fadeIn 0.5s forwards, moveRight 5s infinite alternate; 
+}
+
+/* ANIMATION NG PICTURE, NAGALAW */
+@keyframes fadeIn { 
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1; 
+  }
+}
+
+
+@keyframes moveRight {
+  0% {
+      transform: translateX(-50px); 
+  }
+  100% {
+      transform: translateX(50px); 
+  }
+}
+
+/* ANIMATIONG NG TEXT SA HOME PAGE */
+.main-text { 
+  margin-left: 20px;
+  color: lch(59.22% 71.54 144.14);
+  font-size: 20px;
+  opacity: 0; 
+  animation: fadeIn 0.5s forwards, boom 0.5s forwards; 
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; 
+  }
+  to {
+      opacity: 1; 
+  }
+}
+
+
+@keyframes boom {
+  0% {
+      transform: scale(0.5);
+      opacity: 0; 
+  }
+  50% {
+      transform: scale(1.2); 
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1); 
+  }
+}
+.main-text h2{
+  margin-top: -20px;
+  font-size: 50px;
+}
+.main-text h3{
+  margin-top: -40px;
+}
+.main-text p{
+  text-align: justify;
+  width: 90%;
+}
+
+/* SKILLS AT ICONS GALING SA ONLINE
+/* SECOND SECTION */ 
+.second-section{
+  display: flex;
+  width: 90%;
+  background-color:  hsla(305, 71%, 16%, 0.644);
+  margin: 20px auto;
+  border-radius: 20px;
+  font-size: 30px;
+}
+
+.main-text-skills{
+  text-align: center;
+  margin: 0 auto;
+  color: lch(55.73% 93.7 312.73);
+  font-size: 20px;
+}
+
+/* PORJECTS NA NAGAWA AT MGA DESIGNS */
+/* THIRD SECTION */ 
+.third-section{
+  display: flex;
+  width: 90%;
+  background-color:  lab(31.19% 34.73 -28.84);
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.main-text-project{
+  text-align: center;
+  justify-content: center;
+  margin-left: 20px;
+  color: hsl(298, 100%, 71%);
+  font-size: 20px;
+}
+.main-text-project a{
+  color: hwb(303 27% 15%);
+}
+.main-text-project img{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.main-text-project img:hover {
+  transform: scale(1.1); 
+}
+
+/* CONTACT INFORMATION AT STYLE NG ELEMENTS
+/* FOURTH SECTION */ 
+.fourth-section{
+  display: flex;
+  width: 90%;
+  background-color:  hwb(283 27% 14% / 0.479);
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.main-text-contact{
+  margin: 0 auto;
+  text-align: center;
+  color: hsla(0, 0%, 0%, 0.918);
+  font-size: 20px;
+}
+.main-text-contact i{
+  height: 50px;
+  width: 50px;
+  color: #000000;
+}
+  .main-text-contact a{
+    height: 50px;
+    width: 50px;
+    color: lch(90.19% 49.51 197.01);
+}
+/*  PINAKA FOOTER AT DESIGN */
+footer{ 
+  text-align: center;
+  background-color:  #8a1b9481;
+  color: #06090a65;
+  margin-bottom: -100px;
+}
+
+/*  DESIGN NG BACK TO TOP AT FUNCTIONS */
+.back-to-top { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  background-color: hsl(286, 99%, 50%); 
+  color: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  text-align: center; 
+  line-height: 50px; 
+  font-size: 24px; 
+  display: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.back-to-top:hover {
+  background-color: #555; 
+}
+/* MENU BAR SA MALIIT NA SCREENS */
+#nav-icon i{ 
+  font-size: 30px;
+  color: hsl(305, 89%, 25%);
+  margin-right: 30px;
+}
+
+/* DROPDOWN */
+.nav.active {
+  display: flex; 
+  animation: slideDown 0.7s ease forwards;
+  border-radius: 10px;
+}
+
+@keyframes slideDown {
+  from {
+      max-height: 0;
+      opacity: 0;
+  }
+  to {
+      max-height: 200px; 
+      opacity: 1;
+  }
+}
+
+/* RESPONSIVENESS SA MALILIIT NA SCREEN */
+#menu-header {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+header {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.nav {
+    text-align: center;
+    position: absolute; 
+    top: 50px; 
+    right: 0;
+    background: #420060; 
+    padding: 10px; 
+    display: flex;
+    flex-direction: column; 
+    width: 150px; 
+    z-index: 1000; 
+}
+
+
+.nav {
+    margin-top: 10px; 
+    display: none; 
+}
+
+#nav-icon {
+    display: block; 
+    cursor: pointer; 
+}
+#port-head {
+  display: none;
+}
+#menu-header {
+  display: block;
+}
+
+}
+
+@media screen and (max-width: 320px) {
+  header {
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .nav {
+      text-align: center;
+      position: absolute; 
+      top: 50px; 
+      right: 0;
+      background: purple(9.35% 33.81 -30.46); 
+      padding: 10px; 
+      display: flex;
+      flex-direction: column; 
+      width: 150px; 
+      z-index: 1000; 
+  }
+
+
+  .nav {
+      margin-top: 10px; 
+      display: none; 
+  }
+
+  #nav-icon {
+      display: block; 
+      cursor: pointer; 
+  }
+  #port-head {
+    display: none;
+  }
+  #menu-header {
+    display: block;
+  }
+
 }
